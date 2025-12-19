@@ -1,8 +1,6 @@
 # playwright-bun
 
 [![GitHub Container Registry](https://img.shields.io/badge/ghcr.io-playwright--bun-blue?logo=github)](https://github.com/mosadif/playwright-bun/pkgs/container/playwright-bun)
-[![Docker Hub](https://img.shields.io/docker/v/mosadif/playwright-bun?label=Docker%20Hub&logo=docker)](https://hub.docker.com/r/mosadif/playwright-bun)
-[![Docker Pulls](https://img.shields.io/docker/pulls/mosadif/playwright-bun?logo=docker)](https://hub.docker.com/r/mosadif/playwright-bun)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Docker image with [Playwright](https://playwright.dev/) and [Bun](https://bun.sh/) runtime for E2E testing.
@@ -19,16 +17,8 @@ Docker image with [Playwright](https://playwright.dev/) and [Bun](https://bun.sh
 
 ## Quick Start
 
-### From GitHub Container Registry
-
 ```bash
 docker pull ghcr.io/mosadif/playwright-bun:latest
-```
-
-### From Docker Hub
-
-```bash
-docker pull mosadif/playwright-bun
 ```
 
 ## Usage
@@ -36,12 +26,7 @@ docker pull mosadif/playwright-bun
 ### Run Tests
 
 ```bash
-# Using GitHub Container Registry
 docker run --rm -v $(pwd):/app ghcr.io/mosadif/playwright-bun:latest \
-  bash -c "bun install && bunx playwright test"
-
-# Using Docker Hub
-docker run --rm -v $(pwd):/app mosadif/playwright-bun \
   bash -c "bun install && bunx playwright test"
 ```
 
@@ -87,17 +72,13 @@ docker run --rm \
 
 ## Tags
 
-| Tag | Description |
-|-----|-------------|
-| `latest` | Latest stable version |
-| `1.49.1` | Playwright 1.49.1 |
+When a new git tag is pushed (e.g., `v1.49.1`), the following Docker tags are automatically created:
 
-## Registries
-
-| Registry | Image |
-|----------|-------|
-| GitHub Container Registry | `ghcr.io/mosadif/playwright-bun` |
-| Docker Hub | `mosadif/playwright-bun` |
+| Tag | Description | Example |
+|-----|-------------|---------|
+| `latest` | Latest stable version | `ghcr.io/mosadif/playwright-bun:latest` |
+| `<version>` | Full semantic version | `ghcr.io/mosadif/playwright-bun:1.49.1` |
+| `<major>.<minor>` | Major.minor version | `ghcr.io/mosadif/playwright-bun:1.49` |
 
 ## Building Locally
 
