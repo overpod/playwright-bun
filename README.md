@@ -7,7 +7,7 @@ Docker image with [Playwright](https://playwright.dev/) and [Bun](https://bun.sh
 
 ## Features
 
-- **Playwright** 1.49.1 with all browsers pre-installed
+- **Playwright** 1.57.0 with all browsers pre-installed
 - **Bun** runtime (latest version)
 - **Browsers included:**
   - Chromium
@@ -72,13 +72,13 @@ docker run --rm \
 
 ## Tags
 
-When a new git tag is pushed (e.g., `v1.49.1`), the following Docker tags are automatically created:
+When a new git tag is pushed (e.g., `v1.57.0`), the following Docker tags are automatically created:
 
 | Tag | Description | Example |
 |-----|-------------|---------|
 | `latest` | Latest stable version | `ghcr.io/mosadif/playwright-bun:latest` |
-| `<version>` | Full semantic version | `ghcr.io/mosadif/playwright-bun:1.49.1` |
-| `<major>.<minor>` | Major.minor version | `ghcr.io/mosadif/playwright-bun:1.49` |
+| `<version>` | Full semantic version | `ghcr.io/mosadif/playwright-bun:1.57.0` |
+| `<major>.<minor>` | Major.minor version | `ghcr.io/mosadif/playwright-bun:1.57` |
 
 ## Building Locally
 
@@ -91,15 +91,15 @@ docker build -t playwright-bun .
 This image is automatically built and published to GitHub Container Registry when a new tag is created:
 
 ```bash
-git tag v1.49.1
-git push origin v1.49.1
+git tag v1.57.0
+git push origin v1.57.0
 ```
 
 The GitHub Actions workflow will:
 1. Build the Docker image
 2. Push to `ghcr.io/mosadif/playwright-bun` with tags:
-   - `v1.49.1` (full version)
-   - `1.49` (major.minor)
+   - `1.57.0` (full version)
+   - `1.57` (major.minor)
    - `latest`
 
 ## License
